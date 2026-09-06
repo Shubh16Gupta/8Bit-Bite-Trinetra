@@ -3,7 +3,7 @@
 
 // ---------- BLE anchors ----------
 // Matched by BLE advertised device name (not MAC -- avoids Android MAC randomization issues)
-static const char* ANCHOR_NAME[3] = {"Redmi", "Adarsh", "Shubh"};
+static const char* ANCHOR_NAME[3] = {"Redmi", "Realme", "Shubh"};
 
 // Measured position of each phone in meters, relative to your chosen origin
 static const float ANCHOR_X[3] = {0.0, 0.0, 3.1};
@@ -19,14 +19,14 @@ static const int SCAN_TIME_SEC = 1;               // BLE scan window per loop
 static const int SMOOTHING_SAMPLES = 5;             // moving-average window per anchor
 
 // ---------- WiFi / backend ----------
-static const char* WIFI_SSID = "your_wifi_ssid";
-static const char* WIFI_PASSWORD = "your_wifi_password";
+static const char* WIFI_SSID = "AndroidAP_Lineage";
+static const char* WIFI_PASSWORD = "12345678";
 
 // Set USE_HTTPS to match SERVER_URL's scheme:
 //   true  -> https:// (e.g. the deployed Render backend)
 //   false -> http://  (e.g. the backend on your laptop: http://<mac-ip>:4000/api/position)
-static const bool USE_HTTPS = true;
-static const char* SERVER_URL = "https://your-app-name.onrender.com/api/position";
+static const bool USE_HTTPS = false;
+static const char* SERVER_URL = "http://10.117.84.1:4000/api/position";//"https://your-app-name.onrender.com/api/position";
 
 // The band's identifier is the chip's own WiFi MAC (unique per board), read at
 // runtime in connectWiFi() -- no need to hardcode a per-device value.

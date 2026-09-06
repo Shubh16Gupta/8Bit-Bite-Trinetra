@@ -1,0 +1,2 @@
+# Barricade agent (host side)
+pyserial
